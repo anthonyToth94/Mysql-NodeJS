@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.outer {
+  background: black;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+header {
+  padding: 1rem;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  flex: 1;
+}
+
+#home,
+#create {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 1s ease;
+}
+#home {
+  margin-right: 1rem;
+}
+#home:hover,
+#create:hover {
+  border-bottom: 0.1rem solid white;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.books {
+  margin: 1rem;
+  padding: 1rem;
+  flex-basis: 28rem;
+  background: black;
+  color: white;
+
+  text-align: center;
+}
+.name {
+  font-size: 3rem;
+}
+.isInStock {
+  font-size: 2rem;
+  color: green;
+}
+.isInStock.out {
+  color: red;
+}
+.price {
+  font-size: 2rem;
+}
+.edit,
+.delete {
+  margin: 0rem 0.2rem;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.edit:hover,
+.delete:hover {
+  transform: scale(1.1);
+}
+img {
+  width: 100%;
+}
+
+section {
+  padding: 1rem;
+}
+section h4 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+#update {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  margin: auto;
+}
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  margin: 1rem;
+}
+input[type="submit"] {
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.inputs {
+  text-align: center;
+  margin: 0rem 1rem;
+  font-size: 2rem;
+}
+label {
+  margin: 0rem 0.6rem;
+  cursor: pointer;
+}
+#createMain {
+  width: 50rem;
+  margin: auto;
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+#createMain h4 {
+  font-size: 3rem;
+}
+#createForm {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 2.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

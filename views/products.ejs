@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <%- include('partials/header.ejs') %>
+
+    <div class="container">
+      <main>
+        <% for(result of results) { %> %>
+        <div class="books">
+          <img src="book.jpg" alt="picture" />
+          <h3 class="name"><%= result.name %></h3>
+          <p class="isInStock
+            <%=result.isInStock === 1 ? "" : "out"%>"><%= result.isInStock === 1
+            ? "In Stock" : "Out of Stock" %>
+          </p>
+          <p class="price"><%= result.price %> €</p>
+          <button class="edit" data-productid="<%= result.id %>">EDIT</button>
+          <button class="delete" data-productid="<%= result.id %>">
+            DELETE
+          </button>
+        </div>
+        <% }%>
+      </main>
+      <section></section>
+    </div>
+    <%- include('partials/footer.ejs') %>
+    <script src="editDel.js"></script>
+  </body>
+</html>

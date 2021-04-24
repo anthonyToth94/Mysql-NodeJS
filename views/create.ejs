@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+        <%- include('partials/header.ejs') %>
+
+        <div class="container">
+          <main id="createMain">
+            <h4>Create a book!</h4>
+            <form action="" id="createForm">
+              <input
+                type="text"
+                name="name"
+                autocomplete="off"
+                required
+                placeholder="Name..."
+              />
+
+              <input
+              type="number"
+              name="price"
+              autocomplete="off"
+              required
+              placeholder="Price..."
+              min="0"
+            />
+
+              <div class="inputs">
+                <label for="yes">Yes</label
+                ><input type="radio" id="yes" name="isInStock" value="yes" checked />
+                <label for="no">No</label
+                ><input type="radio" id="no" name="isInStock" value="no" />
+              </div>
+
+
+              <input type="submit" name="submit" value="Create" />
+            </form>
+          </main>
+        </div>
+
+        <%- include('partials/footer.ejs') %>
+        <script src="create.js"></script>
+      </body>
+    </html>
+  </body>
+</html>
